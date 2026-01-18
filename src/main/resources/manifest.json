@@ -1,11 +1,11 @@
 {
     "Group": "Example",
-    "Name": "ExamplePlugin",
+    "Name": "StoneSkipPlugin",
     "Version": "0.0.2",
-    "Description": "An example plugin for HyTale!",
+    "Description": "Rebote de rubble en agua (35%)",
     "Authors": [
         {
-            "Name": "It's you!"
+            "Name": "@perso_dev"
         }
     ],
     "Website": "example.org",
