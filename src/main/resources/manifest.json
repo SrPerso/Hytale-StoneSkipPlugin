@@ -1,14 +1,14 @@
 {
-    "Group": "Example",
+    "Group": "perso_dev",
     "Name": "StoneSkipPlugin",
-    "Version": "0.0.2",
+    "Version": "1.0.0",
     "Description": "Rebote de rubble en agua (35%)",
     "Authors": [
         {
             "Name": "@perso_dev"
         }
     ],
-    "Website": "example.org",
+    "Website": "",
     "ServerVersion": "*",
     "Dependencies": {
         
@@ -17,6 +17,6 @@
         
     },
     "DisabledByDefault": false,
-    "Main": "org.example.plugin.ExamplePlugin",
+    "Main": "dev.perso_dev.stoneskip.StoneSkipPlugin",
     "IncludesAssetPack": true
 }

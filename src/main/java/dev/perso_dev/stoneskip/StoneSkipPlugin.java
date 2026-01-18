@@ -1,20 +1,29 @@
 package dev.perso_dev.stoneskip;
 
-import net.hytale.server.plugin.java.JavaPlugin;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.PluginManager;
+import com.hypixel.hytale.server.core.plugin.JavaPlugin;
+import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
 public final class StoneSkipPlugin extends JavaPlugin {
 
-    @Override
-    public void onEnable() {
-        PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new StoneSkipListener(this), this);
-        getLogger().info("¡StoneSkip activated!");
+    private StoneSkipListener listener;
+
+    public StoneSkipPlugin(JavaPluginInit init) {
+        super(init);
     }
 
     @Override
-    public void onDisable() {
-        getLogger().info("StoneSkip desactivated.");
+    protected void start() {
+        // Registrar el listener para eventos usando getEventRegistry()
+        listener = new StoneSkipListener(this);
+        listener.register();
+        
+        System.out.println("¡StoneSkip activado! Rebote 35% en agua.");
+    }
+
+    protected void stop() {
+        if (listener != null) {
+            listener.unregister();
+        }
+        System.out.println("StoneSkip desactivado.");
     }
 }
